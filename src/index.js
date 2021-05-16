@@ -3,7 +3,8 @@ const forms= document.getElementById("create-task-form");
 forms.addEventListener("submit",(e)=>{
   e.preventDefault();
   addAndDeleteToDo(); 
-  isDate(); 
+  isDate();
+  e.target.reset();
 })
 const getList=document.getElementById("tasks");
 const input=document.getElementById("new-task-description");
