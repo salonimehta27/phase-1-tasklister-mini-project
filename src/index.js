@@ -4,7 +4,7 @@ forms.addEventListener("submit",(e)=>{
   e.preventDefault();
   addAndDeleteToDo(); 
   isDate();
-  e.target.reset();
+  e.target.reset(); //resets the TextBox
 })
 const getList=document.getElementById("tasks");
 const input=document.getElementById("new-task-description");
