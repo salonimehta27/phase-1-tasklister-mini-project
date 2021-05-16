@@ -1,23 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-
 const forms= document.getElementById("create-task-form");
 forms.addEventListener("submit",(e)=>{
   e.preventDefault();
-  addAndDelete(); 
-  isDate();
-    
+  addAndDeleteToDo(); 
+  isDate(); 
 })
 const getList=document.getElementById("tasks");
 const input=document.getElementById("new-task-description");
 
-function addAndDelete()
+function addAndDeleteToDo()
 {
-  //add
+  //add todo
   const newLi=document.createElement("li");
     getList.appendChild(newLi);
     const date=document.getElementById("date");
-    newLi.innerHTML=input.value +" "+ date.value;
-//delete
+    newLi.innerHTML=input.value +" - "+"Due:"+" "+date.value;
+//delete todo
   const del=document.createElement("button");
     newLi.appendChild(del);
     const addX=document.createTextNode("DONE");
